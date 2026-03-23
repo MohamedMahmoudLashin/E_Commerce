@@ -8,4 +8,5 @@ class AppColor {
   static const kBlack0 = Color(0xff000000 );
   static const kGrey0 = Color(0xffA8A8A9 );
   static const kPurple0 = Color(0xffFFCCD5 );
+  static const kBlack1 = Color(0xff17223B );
 }

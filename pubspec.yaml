@@ -17,6 +17,7 @@ dependencies:
   easy_localization: ^3.0.8
 
 dev_dependencies:
+  flutter_launcher_icons: ^0.13.1
   flutter_test:
     sdk: flutter
   flutter_lints: ^6.0.0
@@ -27,9 +28,15 @@ flutter:
   assets:
     - assets/translations/
     - assets/images/
+    - assets/icons/
 
 flutter_native_splash:
   color: "#FFFFFF"
   image: assets/images/splash.png
   android: true
   ios: true
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/logo.png"

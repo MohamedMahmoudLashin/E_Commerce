@@ -1,9 +1,57 @@
 {
   "skip": "Skip",
+  "next": "Next",
+  "getStart": "Get Started",
+  "prev": "Prev",
+
   "choose": "Choose Products",
   "chooseInfo": "Choose the products you like and add them to your cart.",
   "make": "Make Payment",
   "makeInfo": "Pay easily and securely using your preferred payment method.",
   "get": "Get Your Order",
-  "getInfo": "Receive your order at your doorstep quickly."
+  "getInfo": "Receive your order at your doorstep quickly.",
+
+  "welcome": "Welcome \nBack!\n",
+  "create": "Create An \nAccount",
+  "forPass": "Forgot \nPassword?",
+
+  "email": "Username or Email",
+  "pass": "Password",
+  "forgPass": "Forgot Password?",
+  "confPass": "Confirm Password",
+  "login": "Login",
+  "createAcc": "Create Account",
+  "submit": "Submit ",
+
+  "orcWith": "- OR Continue With -",
+  "createSign": "Create An Account",
+  "signup": "Sign Up",
+  "iAlreadyHave": "I Already Have an Account",
+
+  "byClicking1": "By clicking the",
+  "register": "Register",
+  "byClicking2": "button, you agree",
+  "byClicking3": "to the public offer",
+  "sendResetPass": "We will send you a message to set or \nreset your new password",
+
+  "persDetail ": "Personal Details",
+  "emailAdd": "Email Address",
+  "change ": "Change Password",
+  "businessAdd ": "Business Address Details",
+  "pinCode ": "Pin code",
+  "add": "Address",
+  "city": "City",
+  "state": "State",
+  "country": "Country",
+  "bankAcc ": "Bank Account Details",
+  "bankNum ": "Bank Account Number",
+  "bankName ": "Account Holder’s Name",
+  "ifsc ": "IFSC Code",
+  "save  ": "Save",
+
+  "shopBag": "Shopping Bag",
+  "check":"Checkout",
+  "select ":"Select"
+
+
 }

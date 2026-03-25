@@ -51,7 +51,10 @@
 
   "shopBag": "Shopping Bag",
   "check":"Checkout",
-  "select ":"Select"
+  "select ":"Select",
+
+  "t1Get": "You want \nAuthentic, here \nyou go!",
+  "t2Get": "Find it here, buy it now!"
 
 
 }

@@ -54,7 +54,22 @@
   "select ":"Select",
 
   "t1Get": "You want \nAuthentic, here \nyou go!",
-  "t2Get": "Find it here, buy it now!"
+  "t2Get": "Find it here, buy it now!",
+
+  "sear0": "View all",
+  "sear1": "Search any Product..",
+  "sear2": "All Featured",
+  "sear3": "Sort",
+  "sear4": "Filter",
+  "sear5": "Beauty",
+  "sear6": "Fashion",
+  "sear7": "Kids",
+  "sear8": "Mens",
+  "sear9": "Womens",
+  "sear10": "Trending Products ",
+  "sear11": "New Arrivals",
+  "sear12": "Summer’ 25 Collections",
+  "sear13": "Sponserd"
 
 
 }

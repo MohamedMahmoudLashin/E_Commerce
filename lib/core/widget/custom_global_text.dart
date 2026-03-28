@@ -1,10 +1,8 @@
 import 'package:flutter/cupertino.dart';
+import '../responsive/responsive_extension.dart';
 
-import '../../../../core/responsive/responsive_extension.dart';
-import '../../../../core/theme/app_color.dart';
-
-class CustomGetText extends StatelessWidget {
-  const CustomGetText({
+class CustomGlobalText extends StatelessWidget {
+  const CustomGlobalText({
     super.key,
     required this.size,
     required this.weight,

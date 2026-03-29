@@ -1,10 +1,11 @@
+import 'package:e_commerce/core/widget/custom_global_container_text_button.dart';
+import 'package:e_commerce/core/widget/custom_global_text.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../../../../core/responsive/responsive_extension.dart';
 import '../../../../core/theme/app_color.dart';
 import '../widget_screen/custom_container_text_button.dart';
-import '../widget_screen/custom_text.dart';
 import '../widget_screen/custom_text_form_field.dart';
 import '../widget_screen/header_text.dart';
 
@@ -33,9 +34,17 @@ class _ForgPassState extends State<ForgPass> {
                 SizedBox(height: 40.h,),
                 CustomTextFormField(obs: false,controller: emailController,),
                 SizedBox(height: 30.h,),
-                CustomText(size: 15, word: "sendResetPass".tr()),
+                Row(
+                  children: [
+                    CustomGlobalText(size: 16, weight: FontWeight.w500, color: AppColor.kGrey0, txt: "sendResetPass".tr()),
+                  ],
+                ),
                 SizedBox(height: 50.h,),
-                CustomContainerTextButton(word: "submit".tr(),press: (){},),
+                ///use CustomGlobalContainerTextButton
+                CustomGlobalContainerTextButton(
+                    press:(){
+                      Navigator.of(context).pushReplacementNamed("login");
+                    },size: 26, weight: FontWeight.w600, color: AppColor.kWhite1, txt: "submit".tr()),
               ],
             ),
           )),

@@ -1,15 +1,15 @@
 import 'package:e_commerce/core/responsive/responsive_extension.dart';
 import 'package:e_commerce/core/theme/app_color.dart';
-import 'package:e_commerce/features/auth/presentation/widget_screen/custom_cliprrect.dart';
-import 'package:e_commerce/features/auth/presentation/widget_screen/custom_text.dart';
-import 'package:e_commerce/features/auth/presentation/widget_screen/custom_text_button.dart';
+import 'package:e_commerce/core/widget/custom_global_container_text_button.dart';
+import 'package:e_commerce/core/widget/custom_global_text.dart';
+import 'package:e_commerce/core/widget/custom_global_text_button.dart';
+import 'package:e_commerce/features/auth/presentation/widget_screen/custom_auth_clipRRect.dart';
 import 'package:e_commerce/features/auth/presentation/widget_screen/custom_text_form_field.dart';
 import 'package:e_commerce/features/auth/presentation/widget_screen/header_text.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../widget_screen/custom_container_text_button.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -40,39 +40,54 @@ class _LoginScreenState extends State<LoginScreen> {
                 Row(
                   mainAxisAlignment: .end,
                   children: [
-                    CustomTextButton(word: "forgPass".tr(),color: AppColor.kRed0,size: 15,press: (){
+                    ///use CustomGlobalTextButton
+                    CustomGlobalTextButton(
+                        press:(){
                       Navigator.of(context).pushNamedAndRemoveUntil("forgpass",(route)=>route.settings.name=="login");
-                    },),
+                    },
+                        txt: "forgPass".tr(), color: AppColor.kRed0, size: 16, weight: FontWeight.w500),
                   ],
                 ),
                 SizedBox(height: 45.h,),
-                CustomContainerTextButton(word: "login".tr(),press: (){},),
+                ///use CustomGlobalContainerTextButton
+                CustomGlobalContainerTextButton(
+                    press:(){
+                  Navigator.of(context).pushReplacementNamed("getStart");
+                },size: 26, weight: FontWeight.w600, color: AppColor.kWhite1, txt: "login".tr()),
+
                 SizedBox(height: 120.h,),
+
+                ////////////OR Continue With///////////////
                 Column(
                   mainAxisAlignment: .center,
                   children: [
-                    CustomText(size: 15, word: "orcWith".tr()),
+                    ///use CustomGlobalText
+                    CustomGlobalText(size: 15, weight: FontWeight.w500, color: AppColor.kGrey0, txt: "orcWith".tr()),
                     SizedBox(height: 10.h,),
                     Padding(
                       padding: EdgeInsets.symmetric(vertical: 15.h),
                       child: Row(
                         mainAxisAlignment: .center,
                         children: [
-                          CustomCliprrect(image: "assets/icons/google.svg"),
+                          CustomAuthClipRRect(image: "assets/icons/google.svg"),
                           SizedBox(width: 15.w,),
-                          CustomCliprrect(image: "assets/icons/apple.svg"),
+                          CustomAuthClipRRect(image: "assets/icons/apple.svg"),
                           SizedBox(width: 15.w,),
-                          CustomCliprrect(image: "assets/icons/facebook.svg"),
+                          CustomAuthClipRRect(image: "assets/icons/facebook.svg"),
                         ],
                       ),
                     ),
                     Row(
                       mainAxisAlignment: .center,
                       children: [
-                        CustomText(size: 17, word: "createSign".tr()),
-                        CustomTextButton(word: "signup".tr(), color: AppColor.kRed0,size: 17,press: (){
-                          Navigator.of(context).pushReplacementNamed("signup");
-                        },)
+                        ///use CustomGlobalText
+                        CustomGlobalText(size: 17, weight: FontWeight.w500, color: AppColor.kGrey0, txt: "createSign".tr()),
+                        ///use CustomGlobalTextButton
+                        CustomGlobalTextButton(
+                            press:(){
+                              Navigator.of(context).pushReplacementNamed("signup");
+                            },
+                            txt:"signup".tr(), color: AppColor.kRed0, size: 17, weight: FontWeight.w500)
                       ],
                     ),
                   ],

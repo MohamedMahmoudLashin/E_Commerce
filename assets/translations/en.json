@@ -32,7 +32,8 @@
   "register": "Register",
   "byClicking2": "button, you agree",
   "byClicking3": "to the public offer",
-  "sendResetPass": "We will send you a message to set or \nreset your new password",
+  "sendResetPass": "We will send you a message to set or reset",
+  "sendResetPass0": "your new password",
 
   "persDetail ": "Personal Details",
   "emailAdd": "Email Address",
@@ -56,6 +57,22 @@
   "t1Get": "You want \nAuthentic, here \nyou go!",
   "t2Get": "Find it here, buy it now!",
 
+  "disc0": "50-40% OFF",
+  "disc1": "Now in (product)",
+  "disc2": "All colours",
+  "disc3": "Deal of the Day",
+  "disc4": "22h 55m 20s remaining",
+  "disc5": "Trending Products",
+  "disc6": "Last Date 29/02/22",
+
+  "offer1": "Special Offers",
+  "offer2": "We make sure you get the \noffer you need at best prices",
+
+  "reward0": "Flat and Heels",
+  "reward1": "Stand a chance to get rewarded",
+  "visit": "Visit now ",
+
+  "sear": "Shop Now",
   "sear0": "View all",
   "sear1": "Search any Product..",
   "sear2": "All Featured",

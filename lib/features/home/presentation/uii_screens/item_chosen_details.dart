@@ -1,7 +1,9 @@
 import 'package:e_commerce/core/responsive/responsive_extension.dart';
 import 'package:e_commerce/core/theme/app_color.dart';
 import 'package:e_commerce/core/widget/custom_global_container.dart';
+import 'package:e_commerce/core/widget/custom_global_sized_box.dart';
 import 'package:e_commerce/features/home/presentation/widget/details/custom_app_bar_chosen_item.dart';
+import 'package:e_commerce/features/home/presentation/widget/details/custom_outline_button_size.dart';
 import 'package:flutter/material.dart';
 
 class ItemchosenDetails extends StatefulWidget {
@@ -23,10 +25,28 @@ class _ItemShowsnDetailsState extends State<ItemchosenDetails> {
           child: Column(
             children: [
               CustomGlobalContainer(
-                height: 350.h,
+                height: 320.h,
                 width: double.infinity,
-                  color: AppColor.kGrey1,
-                  widget: Image.asset("assets/images/7.jpg",fit: BoxFit.fill,))
+                  color: AppColor.kWhite0,
+                  widget: Image.asset("assets/images/7.jpg",fit: BoxFit.fill,)),
+              Padding(
+                padding:  EdgeInsets.symmetric(vertical: 30.h,),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    CustomOutlineButtonSize(txt: "6 UK"),
+                    CustomGlobalSizedBox(width: 10,),
+                    CustomOutlineButtonSize(txt: "7 UK"),
+                    CustomGlobalSizedBox(width: 10,),
+                    CustomOutlineButtonSize(txt: "8 UK"),
+                    CustomGlobalSizedBox(width: 10,),
+                    CustomOutlineButtonSize(txt: "9 UK"),
+                    CustomGlobalSizedBox(width: 10,),
+                    CustomOutlineButtonSize(txt: "10 UK")
+                  ],
+                ),
+              ),
+
             ],
           ),
         ),

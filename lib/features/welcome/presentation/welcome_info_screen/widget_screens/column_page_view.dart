@@ -1,3 +1,4 @@
+import 'package:e_commerce/core/widget/custom_global_sized_box.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_svg/svg.dart';
 import '../../../../../core/responsive/responsive_extension.dart';
@@ -19,7 +20,7 @@ class ColumnPageView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(height: 130.h),
+        CustomGlobalSizedBox(height: 130),
         Container(
           height: 360.h,
           width: double.infinity,
@@ -28,7 +29,7 @@ class ColumnPageView extends StatelessWidget {
             fit: BoxFit.contain,
           ),
         ),
-        SizedBox(height: 21.h),
+        CustomGlobalSizedBox(height: 21),
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 35.w),
           child: Column(

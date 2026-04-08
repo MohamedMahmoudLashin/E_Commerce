@@ -1,5 +1,6 @@
 import 'package:e_commerce/core/responsive/responsive_extension.dart';
 import 'package:e_commerce/core/theme/app_color.dart';
+import 'package:e_commerce/core/widget/custom_global_sized_box.dart';
 import 'package:e_commerce/core/widget/custom_global_text.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -31,7 +32,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                 ),
               ),
 
-              SizedBox(height: 20.h),
+              CustomGlobalSizedBox(height: 20),
 
               /// User Info
               Row(
@@ -51,7 +52,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                       ),
                     ),
                   ),
-                  SizedBox(width: 15.w),
+                  CustomGlobalSizedBox(width: 15),
 
                   Expanded(
                     child: Column(
@@ -64,7 +65,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        SizedBox(height: 4.h),
+                        CustomGlobalSizedBox(height: 4),
                         Text(
                           "Flutter Developer",
                           style: TextStyle(
@@ -78,12 +79,12 @@ class _CustomDrawerState extends State<CustomDrawer> {
                 ],
               ),
 
-              SizedBox(height: 30.h),
+              CustomGlobalSizedBox(height: 30),
 
               ///  Divider
               Divider(color: Colors.grey.shade300),
 
-              SizedBox(height: 10.h),
+              CustomGlobalSizedBox(height: 10),
 
               /// ️ Menu Items
               _drawerItem(
@@ -102,7 +103,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                 onTap: () {},
               ),
 
-              SizedBox(height: 10.h),
+              CustomGlobalSizedBox(height: 10),
 
               Divider(color: Colors.grey.shade300),
 
@@ -111,9 +112,9 @@ class _CustomDrawerState extends State<CustomDrawer> {
               ///  Language Dropdown
               Align(
                 alignment: AlignmentDirectional.centerEnd,
-                child: SizedBox(
-                  width: 150.w,
-                  child: DropdownButtonFormField<String>(
+                child: CustomGlobalSizedBox(
+                  width: 150,
+                  widget: DropdownButtonFormField<String>(
                     initialValue: context.locale.languageCode,
                     isDense: true,
                     decoration: InputDecoration(
@@ -163,7 +164,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                 ),
               ),
 
-              SizedBox(height: 10.h),
+              CustomGlobalSizedBox(height: 10),
 
               ///  Logout
               _drawerItem(

@@ -27,15 +27,17 @@ class CustomSearchTextFormField extends StatelessWidget {
           borderRadius: BorderRadius.circular(12.sp),
           borderSide: BorderSide(color: AppColor.kWhite0),
         ),
+        ///use CustomGlobalText
         hint: CustomGlobalText(
+          align: TextAlign.center,
           size: 16,
           weight: FontWeight.w500,
-          color: AppColor.kWhite1,
+          color: AppColor.kGrey0,
           txt: "sear1".tr(),
         ),
         fillColor: AppColor.kWhite0,
-        prefixIcon: SvgPicture.asset("assets/icons/search 1.svg"),
-        suffixIcon: SvgPicture.asset("assets/icons/mic.svg"),
+        prefixIcon: SvgPicture.asset("assets/icons/search 1.svg",fit: BoxFit.scaleDown,),
+        suffixIcon: SvgPicture.asset("assets/icons/mic.svg",fit: BoxFit.scaleDown,),
       ),
     );
   }

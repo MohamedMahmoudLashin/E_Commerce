@@ -1,6 +1,7 @@
 import 'package:e_commerce/core/responsive/responsive_extension.dart';
 import 'package:e_commerce/core/theme/app_color.dart';
 import 'package:e_commerce/core/widget/custom_global_container.dart';
+import 'package:e_commerce/core/widget/custom_global_sized_box.dart';
 import 'package:e_commerce/core/widget/custom_global_text.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -20,7 +21,7 @@ class CustomSpecialOffer extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Image.asset("assets/images/special.png"),
-            SizedBox(width: 30.w),
+            CustomGlobalSizedBox(width: 30),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -31,7 +32,7 @@ class CustomSpecialOffer extends StatelessWidget {
                     color: AppColor.kBlack0,
                     txt: txt1,
                   ),
-                  SizedBox(height: 7.h,),
+                  CustomGlobalSizedBox(height: 7),
                   CustomGlobalText(
                     size: 15,
                     weight: FontWeight.w300,

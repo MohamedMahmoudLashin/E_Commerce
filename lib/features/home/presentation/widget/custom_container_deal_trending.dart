@@ -1,6 +1,7 @@
 import 'package:e_commerce/core/responsive/responsive_extension.dart';
 import 'package:e_commerce/core/theme/app_color.dart';
 import 'package:e_commerce/core/widget/custom_global_container.dart';
+import 'package:e_commerce/core/widget/custom_global_sized_box.dart';
 import 'package:e_commerce/core/widget/custom_global_text.dart';
 import 'package:e_commerce/features/home/presentation/widget/custom_outline_button_action.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -42,11 +43,11 @@ class CustomContainerDealTrending extends StatelessWidget {
                   color: AppColor.kWhite0,
                   txt: title,
                 ),
-                SizedBox(height: 10.h),
+                CustomGlobalSizedBox(height: 10),
                 Row(
                   children: [
                     SvgPicture.asset(icon),
-                    SizedBox(width: 6.w),
+                    CustomGlobalSizedBox(width: 6),
                     CustomGlobalText(
                       size: 16,
                       weight: FontWeight.w400,

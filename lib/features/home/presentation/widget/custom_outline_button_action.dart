@@ -1,5 +1,6 @@
 import 'package:e_commerce/core/responsive/responsive_extension.dart';
 import 'package:e_commerce/core/theme/app_color.dart';
+import 'package:e_commerce/core/widget/custom_global_sized_box.dart';
 import 'package:e_commerce/core/widget/custom_global_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -37,7 +38,7 @@ class CustomOutlineAction extends StatelessWidget {
             color: AppColor.kWhite0,
             txt: txt,
           ),
-          SizedBox(width: 7.w),
+          CustomGlobalSizedBox(height: 7),
           Icon(
             Icons.arrow_forward_rounded,
             fontWeight: FontWeight.bold,

@@ -12,10 +12,12 @@ class CustomGlobalContainerTextButton extends StatelessWidget {
     required this.weight,
     required this.color,
     required this.txt,
+    this.height,
   });
 
+  final double? height;
   final void Function()? press;
-  final int size;
+  final double size;
   final FontWeight weight;
   final Color color;
   final String txt;
@@ -23,7 +25,7 @@ class CustomGlobalContainerTextButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 65.h,
+      height:height!=null?height!.h:65.h,
       decoration: BoxDecoration(
         color: AppColor.kRed0,
         borderRadius: BorderRadius.circular(10.sp),

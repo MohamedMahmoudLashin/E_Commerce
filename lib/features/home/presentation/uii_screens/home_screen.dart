@@ -1,15 +1,16 @@
 import 'package:e_commerce/core/responsive/responsive_extension.dart';
 import 'package:e_commerce/core/theme/app_color.dart';
 import 'package:e_commerce/core/widget/custom_global_container.dart';
+import 'package:e_commerce/core/widget/custom_global_sized_box.dart';
 import 'package:e_commerce/core/widget/custom_global_text.dart';
 import 'package:e_commerce/features/home/data/models/home_item.dart';
-import 'package:e_commerce/features/home/presentation/widget/custom_container_column_items.dart';
+import 'package:e_commerce/features/home/presentation/widget/container_items/custom_container_column_items.dart';
 import 'package:e_commerce/features/home/presentation/widget/custom_container_deal_trending.dart';
 import 'package:e_commerce/features/home/presentation/widget/custom_container_offers.dart';
 import 'package:e_commerce/features/home/presentation/widget/custom_container_rewarded.dart';
 import 'package:e_commerce/features/home/presentation/widget/custom_container_sponsered.dart';
-import 'package:e_commerce/features/home/presentation/widget/custom_drawer.dart';
-import 'package:e_commerce/features/home/presentation/widget/custom_home_clipRRect.dart';
+import 'package:e_commerce/features/home/presentation/widget/drawer/custom_drawer.dart';
+import 'package:e_commerce/features/home/presentation/widget/container_items/custom_home_clipRRect.dart';
 import 'package:e_commerce/features/home/presentation/widget/custom_new_arrival.dart';
 import 'package:e_commerce/features/home/presentation/widget/custom_search_text_form_field.dart';
 import 'package:e_commerce/features/home/presentation/widget/custom_special_offer.dart';
@@ -44,7 +45,7 @@ class _HomeScreenState extends State<HomeScreen> {
         padding: EdgeInsets.symmetric(vertical: 15.h, horizontal: 25.w),
         child: Column(
           children: [
-            SizedBox(height: 15.h,),
+            CustomGlobalSizedBox(height: 15),
             CustomSearchTextFormField(controller: searchController),
             Expanded(
               child: SingleChildScrollView(
@@ -77,7 +78,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   weight: FontWeight.w600,
                                   image: "assets/icons/sort.svg",
                                 ),
-                                SizedBox(width: 30.w),
+                                CustomGlobalSizedBox(width: 30),
                                 CustomContainerFilter(
                                   press: (){
                                     ///what do you want
@@ -100,7 +101,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           height: 110,color: AppColor.kWhite0,
                           widget: ListView.separated(
                             separatorBuilder: (context, index) {
-                              return SizedBox(width: 20.w,);
+                              return CustomGlobalSizedBox(width: 20,);
                             },
                             scrollDirection: Axis.horizontal,
                             itemCount: homeItems.length,
@@ -110,6 +111,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               return CustomHomeCliprrect(
                                 press: (){
                                   ///Navigate to>>>>
+                                  Navigator.of(context).pushNamed("showingitem");
                                 },
                                 image: item.image,
                                 weight: FontWeight.w400,
@@ -134,10 +136,10 @@ class _HomeScreenState extends State<HomeScreen> {
                           child: ListView.separated(
                             scrollDirection: Axis.horizontal,
                               itemBuilder:(context, index) {
-                              return CustomContainerColumnItems(txt: "Women Printed Kurta", subTxt: "Neque porro quisquam est qui dolorem ipsum quia", salary: 1500, rate: 5000);
+                              return CustomContainerColumnItems(txt: "Women Printed Kurta", subTxt: "Neque porro quisquam est qui dolorem ipsum quia", salary: 1500.toString(), rate: 5000);
                               } ,
                               separatorBuilder:(context, index) {
-                                return SizedBox(width: 15.w,);
+                                return CustomGlobalSizedBox(width: 15);
                               } ,
                               itemCount: 5),
                         ),
@@ -162,10 +164,10 @@ class _HomeScreenState extends State<HomeScreen> {
                           child: ListView.separated(
                               scrollDirection: Axis.horizontal,
                               itemBuilder:(context, index) {
-                                return CustomContainerColumnItems(txt: "Women Printed Kurta", subTxt: "Neque porro quisquam est qui dolorem ipsum quia", salary: 1500, rate: 5000);
+                                return CustomContainerColumnItems(txt: "Women Printed Kurta", subTxt: "Neque porro quisquam est qui dolorem ipsum quia", salary: 1500.toString(), rate: 5000);
                               } ,
                               separatorBuilder:(context, index) {
-                                return SizedBox(width: 15.w,);
+                                return CustomGlobalSizedBox(width: 15);
                               } ,
                               itemCount: 5),
                         ),

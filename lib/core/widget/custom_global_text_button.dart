@@ -12,7 +12,7 @@ class CustomGlobalTextButton extends StatelessWidget {
     required this.weight,
   });
   final void Function()? press;
-  final int size;
+  final double size;
   final FontWeight weight;
   final Color color;
   final String txt;

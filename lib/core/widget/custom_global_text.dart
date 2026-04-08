@@ -7,18 +7,20 @@ class CustomGlobalText extends StatelessWidget {
     required this.size,
     required this.weight,
     required this.color,
-    required this.txt,
+    required this.txt,  this.align,
   });
 
-  final int size;
+  final double size;
   final FontWeight weight;
   final Color color;
   final String txt;
+  final TextAlign? align;
 
   @override
   Widget build(BuildContext context) {
     return Text(
-      textAlign: TextAlign.center,
+      softWrap: true,
+      textAlign:align??TextAlign.start,
       txt,
       style: TextStyle(
         height: 1.3,

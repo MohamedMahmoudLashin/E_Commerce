@@ -1,6 +1,7 @@
 import 'package:e_commerce/core/responsive/responsive_extension.dart';
 import 'package:e_commerce/core/theme/app_color.dart';
 import 'package:e_commerce/core/widget/custom_global_container.dart';
+import 'package:e_commerce/core/widget/custom_global_sized_box.dart';
 import 'package:e_commerce/core/widget/custom_global_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +17,7 @@ class CustomContainerColumnItems extends StatelessWidget {
 
   final String txt;
   final String subTxt;
-  final double salary;
+  final String salary;
   final double rate;
 
   @override
@@ -45,7 +46,7 @@ class CustomContainerColumnItems extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    SizedBox(height: 10.h),
+                    CustomGlobalSizedBox(height: 10),
                     ////////title/////////////
                     CustomGlobalText(
                       size: 15,
@@ -53,7 +54,7 @@ class CustomContainerColumnItems extends StatelessWidget {
                       color: AppColor.kBlack0,
                       txt: txt,
                     ),
-                    SizedBox(height: 5.h),
+                    CustomGlobalSizedBox(height: 5),
                     ////////subTitle/////////////
                     CustomGlobalText(
                       size: 13,
@@ -61,7 +62,7 @@ class CustomContainerColumnItems extends StatelessWidget {
                       color: AppColor.kBlack0,
                       txt: subTxt,
                     ),
-                    SizedBox(height: 10.h),
+                    CustomGlobalSizedBox(height: 10),
                     ////////salary/////////////
                     CustomGlobalText(
                       size: 13,
@@ -69,15 +70,15 @@ class CustomContainerColumnItems extends StatelessWidget {
                       color: AppColor.kBlack0,
                       txt: salary.toString(),
                     ),
-                    SizedBox(height: 5.h),
+                    CustomGlobalSizedBox(height: 5),
                     ////////rating/////////////
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        SizedBox(
-                          width: 110.w,
-                          height: 14.h,
-                          child: ListView.separated(
+                        CustomGlobalSizedBox(
+                          width: 110,
+                          height: 14,
+                          widget: ListView.separated(
                             physics: NeverScrollableScrollPhysics(),
                             scrollDirection: Axis.horizontal,
                             itemBuilder: (context, index) => Icon(
@@ -86,7 +87,8 @@ class CustomContainerColumnItems extends StatelessWidget {
                               size: 20.sp,
                             ),
                             separatorBuilder: (context, index) {
-                              return SizedBox(width: 1.w);
+                              return CustomGlobalSizedBox(width: 1);
+                              ;
                             },
                             itemCount: 5,
                           ),

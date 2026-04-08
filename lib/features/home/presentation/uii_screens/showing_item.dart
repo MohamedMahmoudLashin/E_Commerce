@@ -1,6 +1,7 @@
 import 'package:e_commerce/core/responsive/responsive_extension.dart';
 import 'package:e_commerce/core/theme/app_color.dart';
 import 'package:e_commerce/core/widget/custom_global_container.dart';
+import 'package:e_commerce/core/widget/custom_global_sized_box.dart';
 import 'package:e_commerce/core/widget/custom_global_text.dart';
 import 'package:e_commerce/features/home/data/models/showing_item_model.dart';
 import 'package:e_commerce/features/home/presentation/widget/container_items/custom_container_column_items.dart';
@@ -38,7 +39,7 @@ class _ShowingItemState extends State<ShowingItem> {
         padding: EdgeInsets.symmetric(vertical: 15.h, horizontal: 25.w),
         child: Column(
           children: [
-            SizedBox(height: 15.h),
+            CustomGlobalSizedBox(height: 15),
             //////////////text form field search/////////////////
             CustomSearchTextFormField(controller: searchController),
             //////////////filter and sort/////////////////
@@ -65,7 +66,7 @@ class _ShowingItemState extends State<ShowingItem> {
                         weight: FontWeight.w600,
                         image: "assets/icons/sort.svg",
                       ),
-                      SizedBox(width: 30.w),
+                      CustomGlobalSizedBox(width: 30),
                       CustomContainerFilter(
                         press: () {
                           ///what do you want
@@ -111,7 +112,7 @@ class _ShowingItemState extends State<ShowingItem> {
                                   color: AppColor.kBlack1,
                                   txt: product.title,
                                 ),
-                                SizedBox(height: 4),
+                                CustomGlobalSizedBox(height: 4),
                                 CustomGlobalText(
                                   size: 15,
                                   weight: FontWeight.w500,

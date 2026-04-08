@@ -1,7 +1,7 @@
 import 'package:e_commerce/core/theme/app_color.dart';
 import 'package:flutter/cupertino.dart';
-import '../../../../core/responsive/responsive_extension.dart';
-import '../../../../core/widget/custom_global_text.dart';
+import '../../../../../core/responsive/responsive_extension.dart';
+import '../../../../../core/widget/custom_global_text.dart';
 
 class CustomHomeCliprrect extends StatelessWidget {
   const CustomHomeCliprrect({

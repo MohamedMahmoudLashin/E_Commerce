@@ -1,6 +1,7 @@
 import 'package:e_commerce/core/responsive/responsive_extension.dart';
 import 'package:e_commerce/core/theme/app_color.dart';
 import 'package:e_commerce/core/widget/custom_global_container.dart';
+import 'package:e_commerce/core/widget/custom_global_sized_box.dart';
 import 'package:e_commerce/core/widget/custom_global_text.dart';
 import 'package:e_commerce/features/home/presentation/widget/custom_outline_button_action.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -32,7 +33,7 @@ class CustomNewArrival extends StatelessWidget {
                         color: AppColor.kBlack0,
                         txt: "sear11".tr(),
                       ),
-                      SizedBox(height: 5.h),
+                      CustomGlobalSizedBox(height: 5),
                       CustomGlobalText(
                         size: 15,
                         weight: FontWeight.w400,

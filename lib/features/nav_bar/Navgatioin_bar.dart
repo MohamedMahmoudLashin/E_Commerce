@@ -5,6 +5,8 @@ import 'package:e_commerce/features/home/presentation/uii_screens/home_screen.da
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import '../home/presentation/uii_screens/item_chosen_details.dart';
+import '../home/presentation/uii_screens/showing_item.dart';
 
 class HeartOfApp extends StatefulWidget {
   const HeartOfApp({super.key});
@@ -19,8 +21,8 @@ class _HeartOfAppState extends State<HeartOfApp> {
 
   final List<Widget> screens = [
     HomeScreen(),
-    Container(),
-    HomeScreen(),
+    ShowingItem(),
+    ItemchosenDetails(),
     Container(),
     HomeScreen()
   ];
@@ -36,45 +38,49 @@ class _HeartOfAppState extends State<HeartOfApp> {
     return Scaffold(
       backgroundColor: AppColor.kWhite1,
       body: screens[_currentPage],
-      bottomNavigationBar: DotCurvedBottomNav(
-        scrollController: _scrollController,
-        hideOnScroll: true,
-        indicatorColor: AppColor.kPurple1,
-        backgroundColor: AppColor.kWhite0,
-        animationDuration: const Duration(milliseconds: 300),
-        animationCurve: Curves.ease,
-        selectedIndex: _currentPage,
-        indicatorSize: 10,
-        borderRadius: 25,
-        height: 70,
-        onTap: (index) {
-          setState(() => _currentPage = index);
-        },
-        items: [
-          SvgPicture.asset("assets/icons/home 1.svg",width: 30.sp,
-            colorFilter: ColorFilter.mode(
-              _currentPage == 0 ? AppColor.kPurple1 : AppColor.kGrey1,
+      bottomNavigationBar: Directionality(
+        ///to reline widgets align
+        textDirection:Directionality.of(context),
+        child: DotCurvedBottomNav(
+          scrollController: _scrollController,
+          hideOnScroll: true,
+          indicatorColor: AppColor.kPurple1,
+          backgroundColor: AppColor.kWhite0,
+          animationDuration: const Duration(milliseconds: 300),
+          animationCurve: Curves.ease,
+          selectedIndex: _currentPage,
+          indicatorSize: 10,
+          borderRadius: 25,
+          height: 70,
+          onTap: (index) {
+            setState(() => _currentPage = index);
+          },
+          items: [
+            SvgPicture.asset("assets/icons/home 1.svg",width: 30.sp,
+              colorFilter: ColorFilter.mode(
+                _currentPage == 0 ? AppColor.kPurple1 : AppColor.kGrey1,
+                BlendMode.srcIn,
+              ),),
+            SvgPicture.asset("assets/icons/heart 1.svg",width: 30.sp,
+              colorFilter: ColorFilter.mode(
+                _currentPage == 1 ? AppColor.kPurple1 : AppColor.kGrey1,
+                BlendMode.srcIn,
+              ),),
+            SvgPicture.asset("assets/icons/shopping-cart 2.svg",width: 35.sp, colorFilter: ColorFilter.mode(
+              _currentPage == 2 ? AppColor.kPurple1 : AppColor.kGrey1,
               BlendMode.srcIn,
             ),),
-          SvgPicture.asset("assets/icons/heart 1.svg",width: 30.sp,
-            colorFilter: ColorFilter.mode(
-              _currentPage == 1 ? AppColor.kPurple1 : AppColor.kGrey1,
+            SvgPicture.asset("assets/icons/search 1.svg",width: 30.sp, colorFilter: ColorFilter.mode(
+              _currentPage == 3 ? AppColor.kPurple1 : AppColor.kGrey1,
               BlendMode.srcIn,
             ),),
-          SvgPicture.asset("assets/icons/shopping-cart 2.svg",width: 35.sp, colorFilter: ColorFilter.mode(
-            _currentPage == 2 ? AppColor.kPurple1 : AppColor.kGrey1,
-            BlendMode.srcIn,
-          ),),
-          SvgPicture.asset("assets/icons/search 1.svg",width: 30.sp, colorFilter: ColorFilter.mode(
-            _currentPage == 3 ? AppColor.kPurple1 : AppColor.kGrey1,
-            BlendMode.srcIn,
-          ),),
-          SvgPicture.asset("assets/icons/settings.svg",width: 30.sp, colorFilter: ColorFilter.mode(
-            _currentPage == 4 ? AppColor.kPurple1 : AppColor.kGrey1,
-            BlendMode.srcIn,
-          ),),
+            SvgPicture.asset("assets/icons/settings.svg",width: 30.sp, colorFilter: ColorFilter.mode(
+              _currentPage == 4 ? AppColor.kPurple1 : AppColor.kGrey1,
+              BlendMode.srcIn,
+            ),),
 
-        ],
+          ],
+        ),
       ),
     );
   }

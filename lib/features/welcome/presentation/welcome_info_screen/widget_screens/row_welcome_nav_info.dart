@@ -1,3 +1,4 @@
+import 'package:e_commerce/core/widget/custom_global_sized_box.dart';
 import 'package:flutter/cupertino.dart';
 import '../../../../../core/responsive/responsive_extension.dart';
 import '../../../../../core/theme/app_color.dart';
@@ -41,7 +42,7 @@ class RowWelcomeNavInfo extends StatelessWidget {
                 height:num==1?12.h:13.h,
                 width:num==1?60.w:13.h,
               ),
-              SizedBox(width: 15.w,),
+              CustomGlobalSizedBox(width: 15),
               Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
